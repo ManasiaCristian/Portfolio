@@ -4,9 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cristian Manasia - Portfolio</title>
-    <link rel="stylesheet" href="Assets/CSS/Index_style.css" />
+    <link rel="stylesheet" href="Assets/CSS/CSS1.css" />
+    <link rel="stylesheet" href="Assets/CSS/CSS2.css" media="only screen and (max-width: 768px)" />
     <script defer src="Assets/JS/particles.min.js"></script>
-    <script defer src="Assets/JS/scripts.js"></script>
+    <script defer src="Assets/JS/PC.js"></script>
+    <script>
+      if (window.innerWidth <= 768) {
+        const script = document.createElement("script");
+        script.src = "Assets/JS/mobile.js";
+        script.defer = true;
+        document.head.appendChild(script);
+      }
+    </script>
   </head>
   <body>
     <div id="particles-js"></div>
@@ -56,15 +65,7 @@
         <h2>My Top Projects</h2>
         <div class="project-grid">
           <!-- Card 1 -->
-          <div class="project-card blue">
-            <h3>Budgeting App</h3>
-            <p>
-                The budget app is a simple app that allows you to keep track of your expenses and income. It also allows you to set a budget for each month and see how much you have left to spend.
-            </p>
-            <a href="https://github.com/ManasiaCristian/Budget" target="_blank">Visit GitHub</a>
-          </div>
-
-          <!-- Card 2 -->
+          
           <div class="project-card red">
             <h3>This Web Site!</h3>
             <p>
@@ -72,7 +73,14 @@
             </p>
             <a href="https://github.com/ManasiaCristian/Cristian-Manasia" target="_blank">Visit GitHub</a>
           </div>
-
+          <!-- Card 2 -->
+          <div class="project-card blue">
+            <h3>Budgeting App</h3>
+            <p>
+                The budget app is a simple app that allows you to keep track of your expenses and income. It also allows you to set a budget for each month and see how much you have left to spend.
+            </p>
+            <a href="https://github.com/ManasiaCristian/Budget" target="_blank">Visit GitHub</a>
+          </div>
           <!-- Card 3 -->
           <div class="project-card navy">
             <h3>Knight's Tour Problem</h3>

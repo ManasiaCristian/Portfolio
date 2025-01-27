@@ -12,6 +12,8 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  overflow: auto; /* Ensure scrolling works */
+  scrollbar-width: none; /* For Firefox */
 }
 
 #particles-js {
@@ -33,19 +35,21 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 3;
+  z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  background-color: transparent;
+  background-color: transparent; /* Fully transparent initially */
+  box-shadow: none; /* No shadow initially */
 }
 
 .navbar.scrolled {
-  background-color: #1b1b1b; /* Dark background when scrolled */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: rgba(27, 27, 27, 1); /* Solid dark color when scrolled */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for distinction */
 }
+
 
 .navbar .logo h1 {
   font-size: 1.2rem;
@@ -204,8 +208,8 @@ header {
   grid-template-columns: repeat(3, 1fr); /* 3 columns */
   grid-template-rows: auto auto; /* Two rows */
   grid-template-areas:
-    "card1 card2 card3"
-    ". card4 ."; /* Bottom card in the center */
+    ". card1 . "
+    "card2 card3 card4"; /* Bottom card in the center */
   gap: 2rem;
   padding: 0 1rem;
   max-width: 1200px;
@@ -256,22 +260,22 @@ header {
 /* Assign Cards to Grid Areas */
 .project-card:nth-child(1) {
   grid-area: card1;
-  background-color: #007bff; /* Blue */
+  background-color: #FB3640; /* Red */
 }
 
 .project-card:nth-child(2) {
   grid-area: card2;
-  background-color: #dc3545; /* Red */
+  background-color:#0C7C59 ; /* Bluer */
 }
 
 .project-card:nth-child(3) {
   grid-area: card3;
-  background-color: #343a40; /* Navy */
+  background-color: #006BA6; /* Navy */
 }
 
 .project-card:nth-child(4) {
   grid-area: card4;
-  background-color: #6c757d; /* Gray */
+  background-color: #F9A03F; /* Gray */
 }
 
 /* Timeline Section */

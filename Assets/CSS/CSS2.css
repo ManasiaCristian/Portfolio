@@ -1,0 +1,298 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: open-sans, sans-serif;
+    background-color: #1b1b1b; /* Keep your dark background */
+    color: #ffffff; /* White text for contrast */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Keep particles behind all content */
+  }
+  
+  #content-wrapper {
+    position: relative;
+    z-index: 1; /* Place all content above particles */
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: none; /* Completely hide the navbar for mobile */
+  }
+  
+
+  /* Header Section */
+header {
+    height: 90vh; /* Reduce the height to move content higher */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Align content higher within the header */
+    align-items: center;
+    text-align: center;
+    padding-top: 1rem; /* Add some padding to fine-tune the position */
+    color: #ffffff;
+  }
+  
+  .header-container h1 {
+    font-size: 3rem; /* Adjust font size for mobile */
+    font-weight: bold;
+    margin-bottom: 0.5rem; /* Reduce space below the title */
+  }
+  
+  .header-container p {
+    font-size: 1.2rem; /* Adjust font size for mobile */
+    font-weight: 300;
+    margin-bottom: 1.5rem; /* Adjust spacing below the subtitle */
+  }
+  
+  
+  /* About Section */
+  /* About Section */
+#about {
+    padding: 2rem 1rem; /* Adjust padding for mobile */
+    background-color: #ffffff; /* Keep the white background for contrast */
+    color: #333333;
+    text-align: left; /* Align content to the left */
+  }
+  
+  #about h2 {
+    font-size: 3rem; /* Adjust the font size for mobile */
+    font-weight: bold;
+    margin-bottom: 1rem; /* Add some spacing below the title */
+    padding-left: 1rem; /* Add padding to align it properly on mobile */
+  }
+  
+  #about p {
+    font-size: 1.5rem; /* Adjust font size for better readability */
+    line-height: 1.8; /* Improve line spacing */
+    max-width: 90%; /* Restrict the width for better layout */
+    margin: 0 auto; /* Center the content */
+    padding-left: 1rem; /* Add left padding to align text with the title */
+  }
+  
+  
+  /* Portfolio Section */
+  #portfolio-section {
+    padding: 2rem 1rem;
+    background-color: transparent; /* Let particles show through */
+    text-align: center;
+  }
+  
+  .portfolio-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .portfolio-content h2 {
+    font-size: 2rem; /* Smaller font size for mobile */
+    font-weight: bold;
+  }
+  
+  /* Footer Section */
+  #footer {
+    position: relative;
+    background-color: transparent; /* Let particles show through */
+    color: #ffffff;
+    padding: 1rem 2rem;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align items */
+  }
+  
+  .contact-info-container {
+    text-align: center; /* Center-align text */
+    max-width: 100%;
+  }
+  
+  .contact-info-container h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  
+  .contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.8;
+  }
+  
+  .contact-info li {
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .contact-info a {
+    color: #a885f5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-info a:hover {
+    color: #c9a7ff;
+  }
+  
+  /* Top Projects Section */
+  #top-projects {
+    padding: 2rem 1rem; /* Adjusted padding for mobile */
+    text-align: center;
+    background-color: #ffffff; /* White background */
+  }
+  
+  #top-projects h2 {
+    font-size: 2rem; /* Adjusted font size for mobile */
+    margin-bottom: 2rem;
+    font-weight: bold;
+    color: #333333;
+  }
+  
+  .project-grid {
+    display: flex; /* Use flexbox for stacking */
+    flex-direction: column; /* Stack items vertically */
+    gap: 1.5rem; /* Add spacing between cards */
+    padding: 1rem;
+  }
+  
+  .project-card {
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center; /* Center-align text for consistency */
+    color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s ease;
+  }
+  
+  .project-card h3 {
+    font-size: 2rem; /* Adjusted font size for mobile */
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-card p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .project-card a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .project-card a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Timeline Section */
+  #timeline {
+    padding: 2rem 1rem; /* Adjusted padding for mobile */
+    text-align: center;
+    background-color: #ffffff;
+    color: #333333;
+  }
+  
+  #timeline h2 {
+    font-size: 2rem; /* Adjusted font size for mobile */
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+  
+  /* Timeline Container */
+  .timeline-container {
+    position: relative; /* Ensure relative positioning for the left line */
+    margin: 0 auto; /* Center the container but not the line */
+  }
+  
+  /* Keep Left Line */
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 8px; /* Position the line to the left */
+    width: 4px;
+    height: 100%;
+    background: #333333; /* Solid line color */
+    z-index: 0;
+  }
+  
+  /* Remove Center Line (if inherited from desktop CSS) */
+  @media (max-width: 768px) {
+    .timeline-container::before {
+      transform: none; /* Remove any center alignment inherited from desktop */
+    }
+  }
+  
+  
+  /* Timeline Items */
+  .timeline-item {
+    position: relative;
+    padding-left: 2rem; /* Ensure spacing from the line */
+  }
+  
+  /* Timeline Dot */
+.timeline-dot {
+    position: absolute;
+    top: 0; /* Align with the top of the timeline item */
+    left: 10px; /* Align with the left line */
+    transform: translate(-50%, -50%); /* Center the dot on the line */
+    width: 16px; /* Adjust dot size */
+    height: 16px; /* Adjust dot size */
+    background-color: #007bff;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    z-index: 1;
+  }
+  
+  
+  .timeline-content {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 100%;
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .timeline-content p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  .timeline-content .timeline-date {
+    font-size: 0.8rem;
+    color: #999999;
+    font-style: italic;
+  }
+  
