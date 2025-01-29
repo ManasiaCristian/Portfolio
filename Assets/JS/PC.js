@@ -94,16 +94,4 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-
-  // Update only specific links to display the base URL
-  document.querySelectorAll("a.base-url").forEach(link => {
-    const fullUrl = link.href; // Get the full URL from the href attribute
-    try {
-      const parsedUrl = new URL(fullUrl); // Parse the full URL
-      const baseUrl = `${parsedUrl.origin}/`; // Extract the base URL
-      link.textContent = baseUrl; // Update the displayed text of the link
-    } catch (error) {
-      console.error("Invalid URL:", fullUrl); // Handle invalid URLs gracefully
-    }
-  });
 });
