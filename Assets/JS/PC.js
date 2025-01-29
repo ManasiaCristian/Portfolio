@@ -1,24 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
   particlesJS.load(
-      "particles-js",
-      "Assets/JS/particles-config.json",
-      function () {
-        console.log("Particles.js loaded for PC.");
-      }
-    );
+    "particles-js",
+    "Assets/JS/particles-config.json",
+    function () {
+      console.log("Particles.js loaded for PC.");
+    }
+  );
+
   if (window.innerWidth > 768) {
     // Initialize particles.js for the full page
     const navbar = document.querySelector(".navbar");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      // When scrolled past 50px, make the navbar solid
-      navbar.classList.add("scrolled");
-    } else {
-      // When at the top, make the navbar transparent
-      navbar.classList.remove("scrolled");
-    }
-  });
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        // When scrolled past 50px, make the navbar solid
+        navbar.classList.add("scrolled");
+      } else {
+        // When at the top, make the navbar transparent
+        navbar.classList.remove("scrolled");
+      }
+    });
 
     // Handle Timeline for Desktop
     const timelineContainer = document.querySelector(".timeline-container");
@@ -75,4 +76,34 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault(); // Prevent default anchor behavior
+
+      const targetId = this.getAttribute("href").substring(1); // Get the target ID
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        // Scroll smoothly to the target element
+        targetElement.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    });
+  });
+
+  // Update only specific links to display the base URL
+  document.querySelectorAll("a.base-url").forEach(link => {
+    const fullUrl = link.href; // Get the full URL from the href attribute
+    try {
+      const parsedUrl = new URL(fullUrl); // Parse the full URL
+      const baseUrl = `${parsedUrl.origin}/`; // Extract the base URL
+      link.textContent = baseUrl; // Update the displayed text of the link
+    } catch (error) {
+      console.error("Invalid URL:", fullUrl); // Handle invalid URLs gracefully
+    }
+  });
 });
